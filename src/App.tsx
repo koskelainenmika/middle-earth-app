@@ -7,7 +7,7 @@ import './App.css';
 
 const App = (): JSX.Element => {
   const dispatch = useDispatch();
-  dispatch(getBlogPosts());
+  dispatch(getBlogPosts(1));
 
   return (
     <div className="App">

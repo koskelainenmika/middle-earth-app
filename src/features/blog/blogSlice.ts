@@ -31,7 +31,7 @@ const slice = createSlice({
   },
 });
 
-export const getBlogPosts = () => async (dispatch: AppDispatch, getState: () => RootState) => {
+export const getBlogPosts = (pageNumber: number) => async (dispatch: AppDispatch, getState: () => RootState) => {
   const state = getState();
   if (state.blog.isLoading) {
     return;
@@ -39,7 +39,7 @@ export const getBlogPosts = () => async (dispatch: AppDispatch, getState: () => 
 
   dispatch(getBlogPostsRequest());
 
-  return fetch(`${API_BLOG_BASE_URL}/wp-json/wp/v2/posts`)
+  return fetch(`${API_BLOG_BASE_URL}/wp-json/wp/v2/posts/?page=${pageNumber}`)
     .then((response) => response.json())
     .then((data) => {
       if (data) {
