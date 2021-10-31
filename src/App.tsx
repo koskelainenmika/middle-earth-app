@@ -1,8 +1,14 @@
 import React from 'react';
+import {useDispatch} from 'react-redux';
+import {getBlogPosts} from './features/blog/blogSlice';
+
 import logo from './logo.svg';
 import './App.css';
 
 const App = (): JSX.Element => {
+  const dispatch = useDispatch();
+  dispatch(getBlogPosts());
+
   return (
     <div className="App">
       <header className="App-header">
