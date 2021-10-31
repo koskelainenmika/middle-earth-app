@@ -6,7 +6,7 @@ const API_BLOG_BASE_URL = process.env.REACT_APP_BLOG_BASE_URL;
 interface AppSliceState {
   error: string | null;
   isLoading: boolean;
-  blogPosts: [];
+  blogPosts: Blog[];
 }
 
 const slice = createSlice({
@@ -21,7 +21,7 @@ const slice = createSlice({
       state.isLoading = true;
       state.error = null;
     },
-    getBlogPostsSuccess: (state, action: PayloadAction<any>) => {
+    getBlogPostsSuccess: (state, action: PayloadAction<Blog[]>) => {
       state.blogPosts = action.payload;
     },
     getBlogPostsFailure: (state, action: PayloadAction<string | null>) => {

@@ -1,9 +1,9 @@
 import React from 'react';
 import {useDispatch} from 'react-redux';
-import {getBlogPosts} from './features/blog/blogSlice';
 
-import logo from './logo.svg';
+import {getBlogPosts} from './features/blog/blogSlice';
 import './App.css';
+import BlogList from './features/blog/BlogList';
 
 const App = (): JSX.Element => {
   const dispatch = useDispatch();
@@ -11,15 +11,7 @@ const App = (): JSX.Element => {
 
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a className="App-link" href="https://reactjs.org" target="_blank" rel="noopener noreferrer">
-          Learn React
-        </a>
-      </header>
+      <BlogList />
     </div>
   );
 };
