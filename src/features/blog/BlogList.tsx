@@ -18,7 +18,7 @@ const BlogList = () => {
 
   return (
     <BlogListContainer>
-      <h1>Blog posts</h1>
+      <h2>Blog posts</h2>
       {renderBlogPosts()}
     </BlogListContainer>
   );

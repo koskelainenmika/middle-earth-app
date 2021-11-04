@@ -10,7 +10,7 @@ const BlogList = (props: BlogListItemProps) => {
 
   return (
     <BlogListItemContainer>
-      <h1>{blogPost.title.rendered}</h1>
+      <h3>{blogPost.title.rendered}</h3>
     </BlogListItemContainer>
   );
 };

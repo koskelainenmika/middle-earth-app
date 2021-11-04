@@ -1,12 +1,15 @@
 import React from 'react';
+
 import BlogList from '../features/blog/BlogList';
+import ScreenContainer from '../components/ScreenContainer';
+import {MainTitle} from '../styles/typography';
 
 const Home = () => {
   return (
-    <div>
-      <h1>Home screen</h1>
+    <ScreenContainer>
+      <MainTitle>Home screen</MainTitle>
       <BlogList />
-    </div>
+    </ScreenContainer>
   );
 };
 
