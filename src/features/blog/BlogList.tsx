@@ -3,6 +3,7 @@ import styled from 'styled-components';
 import {useSelector} from 'react-redux';
 import {selectBlogPosts} from './blogSlice';
 import BlogListItem from './BlogListItem';
+import {H2Title} from '../../styles/typography';
 
 const BlogList = () => {
   const blogs = useSelector(selectBlogPosts);
@@ -18,21 +19,19 @@ const BlogList = () => {
 
   return (
     <BlogListContainer>
-      <h2>Blog posts</h2>
+      <H2Title>Viimeisimmät kirjoitukset</H2Title>
       {renderBlogPosts()}
     </BlogListContainer>
   );
 };
 
 const BlogListContainer = styled.div`
-  margin-top: 10px;
-  margin-bottom: 10px;
+  width: 100%;
   display: flex;
   flex-direction: column;
   justify-content: center;
-  box-shadow: 0px 2px 4px #c8c8c8;
-  border-radius: 12px;
-  padding: 20px;
+  padding-left: 20px;
+  padding-right: 20px;
 `;
 
 export default BlogList;
