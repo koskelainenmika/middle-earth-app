@@ -1,7 +1,7 @@
 import React from 'react';
 import styled from 'styled-components';
 
-import BgImage from '../assets/images/paper_bg.jpg';
+import bgImage from '../assets/images/forest_bg.jpg';
 
 interface ScreenContainerProps {
   children: React.ReactNode;
@@ -14,12 +14,12 @@ const ScreenContainer = (props: ScreenContainerProps) => {
 };
 
 const StyledContainer = styled.div`
-  background: url(${BgImage});
+  background: url(${bgImage});
   background-size: cover;
-  padding: 50px 20px 80px 20px;
+  background-position: center center;
+  padding: 80px 60px 80px 60px;
   display: flex;
   flex-direction: column;
-  align-items: center;
   min-height: 100%;
 `;
 
