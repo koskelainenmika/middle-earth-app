@@ -10,7 +10,7 @@ interface AppSliceState {
 }
 
 const slice = createSlice({
-  name: 'questionnaire',
+  name: 'blog',
   initialState: {
     error: null,
     isLoading: false,

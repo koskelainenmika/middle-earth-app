@@ -28,7 +28,8 @@
     "test": "react-scripts test",
     "eject": "react-scripts eject",
     "lint": "eslint ./src --ext .js,.jsx,.ts,.tsx",
-    "prettier:checkup": "prettier --check ."
+    "prettier:checkup": "prettier --check .",
+    "prettier:write": "prettier --write ."
   },
   "browserslist": {
     "production": [

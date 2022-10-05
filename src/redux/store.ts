@@ -1,10 +1,12 @@
 import {configureStore} from '@reduxjs/toolkit';
 import {setupListeners} from '@reduxjs/toolkit/query';
 import blogReducer from '../features/blog/blogSlice';
+import experienceReducer from '../features/experience/experienceSlice';
 
 export const store = configureStore({
   reducer: {
     blog: blogReducer,
+    experience: experienceReducer,
   },
   middleware: (getDefaultMiddleware) => getDefaultMiddleware(),
 });
