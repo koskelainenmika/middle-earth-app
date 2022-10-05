@@ -41,7 +41,14 @@
     "consistent-return": "off",
     "@typescript-eslint/no-explicit-any": "off",
     "@typescript-eslint/explicit-module-boundary-types": "off",
-    "camelcase": "off"
+    "camelcase": "off",
+    "react/function-component-definition": [
+      "error",
+      {
+        "namedComponents": ["function-declaration", "arrow-function"],
+        "unnamedComponents": "arrow-function"
+      }
+    ]
   },
   "settings": {
     "import/resolver": {

@@ -1,11 +1,11 @@
 import React from 'react';
 import styled from 'styled-components';
-import {useSelector} from 'react-redux';
 import {H2Title} from '../../styles/typography';
 import {selectExperienceList} from './experienceSlice';
+import {useAppSelector} from '../../hooks';
 
 const ExperienceList = () => {
-  const exps = useSelector(selectExperienceList);
+  const exps = useAppSelector(selectExperienceList);
 
   const renderExps = () => {
     if (exps) {

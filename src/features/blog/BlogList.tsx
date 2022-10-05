@@ -1,12 +1,12 @@
 import React from 'react';
 import styled from 'styled-components';
-import {useSelector} from 'react-redux';
 import {selectBlogPosts} from './blogSlice';
 import BlogListItem from './BlogListItem';
 import {H2Title} from '../../styles/typography';
+import {useAppSelector} from '../../hooks';
 
 const BlogList = () => {
-  const blogs = useSelector(selectBlogPosts);
+  const blogs = useAppSelector(selectBlogPosts);
 
   const renderBlogPosts = () => {
     if (blogs) {
